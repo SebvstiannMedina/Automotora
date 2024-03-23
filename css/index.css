@@ -1,39 +1,29 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+  
+ 
+  .navbar-toggler-icon {
+    background-color: #333; /* Cambia el color del icono del botón de hamburguesa */
+  }
+  
 
-nav {
-    background-color: #333;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  .navbar-nav .nav-item.active .nav-link {
+    color: #007bff; /* Cambia el color del enlace activo en la barra de navegación */
+  }
+  
 
-.logo img {
-    height: 50px; /* Ajusta la altura según el tamaño de tu logo */
-    padding: 10px;
-}
-
-.nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #ffcc00;
-}
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #555; /* Cambia el color del enlace al pasar el mouse sobre él */
+  }
+  
