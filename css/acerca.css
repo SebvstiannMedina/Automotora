@@ -27,3 +27,135 @@
     color: #555; /* Cambia el color del enlace al pasar el mouse sobre él */
   }
   
+
+/* Acerca de nosotros cuadro */
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+      width: 100%;
+      display: block;
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.producto-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.producto-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.producto-info {
+  margin-top: 20px;
+}
+
+.producto-tallas {
+  margin-top: 10px;
+}
+
+.producto-precio {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#agregar-al-carrito {
+  display: block;
+  margin-top: 20px;
+}
+
+/*Tabla de contacto*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  /* Agrega borde de color negro */
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas al pasar el mouse por encima */
+th:hover,
+td:hover {
+  background-color: black;
+  /* Cambia el fondo a negro */
+  color: white;
+  /* Cambia el color de texto a blanco */
+}
+
+/* Estilos para el contenedor de la tabla */
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
