@@ -4,6 +4,10 @@
   
   body {
     margin: 0;
+    background-image: url('../img/fondos.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
   }
   
   img {

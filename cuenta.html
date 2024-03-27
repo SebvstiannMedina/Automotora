@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta</title>
-    <link rel="stylesheet" href="css/cuenta.css">
+    <link rel="stylesheet" href="assets/css/cuenta.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
+  <!--NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">
           
@@ -36,8 +37,47 @@
           </ul>
         </div>
       </nav>
+    <!--NAVBAR -->
 
+    <main>
+      <div class="col-12 col-lg-3 offset-lg-9 panel h-100 py-5">
+        <div class="card">
+          <h1 class="card-title text-center mb-4">Inicia sesión</h1>
+          <form action="#" method="POST" class="card-body">
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required>
+            </div>
+            <div class="form-group text-center pt-4">
+              <input type="submit" value="Iniciar sesión" class="btn btn-primary w-100">
+            </div>
+  
+          </form>
+          <div class="card-body">
+            <p class="text-center">¿No tiene una cuenta? <a href="registro.html" id="registrate">Registrate aquí</a></p>
+          </div>
+        </div>
+  
+        <footer class="text-center">
+          Todos los derechos reservados 2020 | <strong>Creado por: devcoy</strong>
+        </footer>
+      </div>
+  
+    </main>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    
 
 
 

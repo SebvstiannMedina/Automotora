@@ -1,0 +1,56 @@
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+  
+ 
+  .navbar-toggler-icon {
+    background-color: #333; /* Cambia el color del icono del botón de hamburguesa */
+  }
+  
+
+  .navbar-nav .nav-item.active .nav-link {
+    color: #007bff; /* Cambia el color del enlace activo en la barra de navegación */
+  }
+  
+
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #555; /* Cambia el color del enlace al pasar el mouse sobre él */
+  }
+/* Termino Navbar */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #007bff;
+  }
+  
+  p {
+    color: #333;
+  }
+  
