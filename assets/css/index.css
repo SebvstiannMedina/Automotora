@@ -1,5 +1,5 @@
 /*Img Navbar*/
-div{
+.container-fluid{
   img{
     width: 120px;
     height: 100px;
