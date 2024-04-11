@@ -2,83 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuenta</title>
-    <link rel="stylesheet" href="assets/css/cuenta.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuenta</title>
+  <link rel="stylesheet" href="assets/css/cuenta.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
   <!--NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-          
-          Moda Urbana
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Acerca.html">Acerca De</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cuenta.html">Cuenta</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    <!--NAVBAR -->
-
-    <main>
-      <div class="col-12 col-lg-3 offset-lg-9 panel h-100 py-5">
-        <div class="card">
-          <h1 class="card-title text-center mb-4">Inicia sesión</h1>
-          <form action="#" method="POST" class="card-body">
-            <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <img src="./assets/IMG/Logo.webp" alt=""><a class="navbar-brand" href="index.html"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Acerca.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./cuenta.html">Cuenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Carrito</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Productos</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Autos</a>
+              <a class="dropdown-item" href="#">Motos</a>
+              <a class="dropdown-item" href="#">Destacados</a>
+              <a class="dropdown-item" href="#">Ofertas</a>
             </div>
-            <div class="form-group">
-              <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required>
-            </div>
-            <div class="form-group text-center pt-4">
-              <input type="submit" value="Iniciar sesión" class="btn btn-primary w-100">
-            </div>
-  
-          </form>
-          <div class="card-body">
-            <p class="text-center">¿No tiene una cuenta? <a href="registro.html" id="registrate">Registrate aquí</a></p>
-          </div>
-        </div>
-  
-        <footer class="text-center">
-          Todos los derechos reservados 2020 | <strong>Creado por: devcoy</strong>
-        </footer>
+          </li>
+        </ul>
       </div>
-     
-  
-    </main>
+    </div>
+  </nav>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"></script>
+  <!--INICIO SESION-->
+  <main>
+    <div class="col-12 col-lg-3 offset-lg-9 panel h-100 py-5">
+      <div class="card">
+        <h1 class="card-title text-center mb-4">Inicia sesión</h1>
+        <form action="#" method="POST" class="card-body">
+          <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required>
+          </div>
+          <div class="form-group text-center pt-4">
+            <input type="submit" value="Iniciar sesión" class="btn btn-primary w-100">
+          </div>
 
-    
+        </form>
+        <div class="card-body">
+          <p class="text-center">¿No tiene una cuenta? <a href="registro.html" id="registrate">Registrate aquí</a></p>
+        </div>
+      </div>
+
+      <footer class="text-center">
+        Todos los derechos reservados 2020 | <strong>Creado por: devcoy</strong>
+      </footer>
+    </div>
+
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 
 
@@ -89,9 +102,11 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
