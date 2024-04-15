@@ -1,8 +1,11 @@
-/* Navbar */
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+/*Img Navbar*/
+.container-fluid{
+  img{
+    width: 120px;
+    height: 100px;
   }
+}
+/* Aqui termina */
   
   .navbar-nav .nav-item {
     margin-right: 10px;
