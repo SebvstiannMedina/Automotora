@@ -4,7 +4,7 @@
   
   body {
     margin: 0;
-    background-image: url('../img/fondos.png');
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/09/19/56/office-932926_1280.jpg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
