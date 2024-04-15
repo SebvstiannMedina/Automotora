@@ -56,47 +56,6 @@
       display: block;
   }
 }
-
-.container {
-  max-width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.producto-imgs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.producto-img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin-right: 0;
-  margin-bottom: 10px;
-}
-
-.producto-info {
-  margin-top: 20px;
-}
-
-.producto-tallas {
-  margin-top: 10px;
-}
-
-.producto-precio {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-#agregar-al-carrito {
-  display: block;
-  margin-top: 20px;
-}
-
 /*Tabla de contacto*/
 table {
   width: 100%;
@@ -130,9 +89,6 @@ td:hover {
   max-width: 600px;
   margin: 0 auto;
 }
-
-
-
 
 /*ICONOS*/
 
