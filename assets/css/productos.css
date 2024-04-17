@@ -7,13 +7,6 @@
   }
   /* Aqui termina */
 
-  .product img {
-    width: 350px;
-    height: 450px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,13 +16,18 @@
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .product {
@@ -38,10 +36,12 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
+    width: 300px; /* Ancho de cada producto */
 }
 
 .product img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -55,4 +55,5 @@ h1 {
 .product p {
     color: #666;
     font-size: 14px;
+    margin-bottom: 10px;
 }
