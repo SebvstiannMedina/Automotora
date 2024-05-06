@@ -3,11 +3,12 @@ function validar() {
     var email = $("#email").val();
     var pass1 = $("#pass1").val();
     var pass2 = $("#pass2").val();
-    var sexo = $("input[name='sexo']:checked").val();
+    var sexoMasculino = $("#sexo-masculino").prop("checked");
+    var sexoFemenino = $("#sexo-femenino").prop("checked");
     var terminos = $("#terminos").prop("checked");
 
     // Validación de campos vacíos
-    if (user == "" || email == "" || pass1 == "" || pass2 == "" || sexo == undefined || !terminos) {
+    if (user == "" || email == "" || pass1 == "" || pass2 == "" || (!sexoMasculino && !sexoFemenino) || !terminos) {
         alert("Por favor, completa todos los campos y acepta los términos y condiciones.");
         return false;
     }
@@ -28,3 +29,4 @@ function validar() {
     // Si todas las validaciones son exitosas, el formulario se enviará
     return true;
 }
+

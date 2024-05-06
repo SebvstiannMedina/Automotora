@@ -11,49 +11,48 @@
 </head>
 
 <body>
-  <!--NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="./assets/IMG/Logo.webp" alt="AUTOSDELMAR">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
-        aria-controls="navbarda" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio
-              <span class="visually-hidden">(current)</span>
+    <!--NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/IMG/Logo.webp" alt="AUTOSDELMAR">
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Acerca.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./cuenta.html">Cuenta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="carrito.html">Carrito</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">Productos</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="./sedan.html">Sedan</a>
-              <a class="dropdown-item" href="./motos.html">Motocicletas</a>
-              <a class="dropdown-item" href="./hatchback.html">Hatchback</a>
-              <a class="dropdown-item" href="./suv.html">SUV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarda" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Acerca.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cuenta.html">Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">Productos</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./sedan.html">Sedan</a>
+                            <a class="dropdown-item" href="./motos.html">Motocicletas</a>
+                            <a class="dropdown-item" href="./hatchback.html">Hatchback</a>
+                            <a class="dropdown-item" href="./suv.html">SUV</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
+        </div>
+    </nav>
 
-    <!--REGISTRO-->>
+    <!--REGISTRO-->
     <br>
     <div class="container" style="max-width: 650px; min-width: 400px;">
         <div class="card">
@@ -74,36 +73,21 @@
 
                     <div class="form-group">
                         <legend>Datos Personales</legend>
-                        <label for="sexo">Sexo:</label>
-                        <input type="radio" id="sexo" name="sexo"> Masculino
-                        <input type="radio" id="sexo" name="sexo"> Femenino <br>
+                        <label for="sexo-masculino">Sexo:</label>
+                        <input type="radio" id="sexo-masculino" name="sexo"> Masculino
+                        <input type="radio" id="sexo-femenino" name="sexo"> Femenino <br>
                         <input type="checkbox" id="terminos"> Acepto los términos y condiciones
                     </div>
-                    <input type="submit" class="btn btn-success" id="boton" value="Registrar">
-                    <input type="reset" class="btn btn-danger" id="boton" value="Reiniciar">
+                    <input type="submit" class="btn btn-success" id="boton-registrar" value="Registrar">
+                    <input type="reset" class="btn btn-danger" id="boton-reiniciar" value="Borrar todo">
                 </form>
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
     <script src="./assets/js/registrar.js"></script>
 </body>
 
