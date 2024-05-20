@@ -11,7 +11,7 @@ fetch(url).then((resp) => resp.json()).then(dato =>{
     noticias.map(function(numero){
         let div = document.createElement('noticias');
         div.innerHTML= `<br>
-                        <img style="max-width:800px" src=${numero.urlToImage}><br>
+                        <img style="max-width:800px" src="${numero.urlToImage}"><br>
                         <h1>${numero.title}</h1>
                         <h2>${numero.description}</h2>
                         <h3>${numero.url}</h3>`;
