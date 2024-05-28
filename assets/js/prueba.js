@@ -31,7 +31,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Redirigir según el rol y la autenticación
     if (usuarioEncontrado) {
       if (role === 'admin') {
-        window.location.href = 'admin.html';
+        window.location.href = './index.html';
       } else {
         window.location.href = 'cliente.html';
       }
