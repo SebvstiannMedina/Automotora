@@ -40,8 +40,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   if (usuarioEncontrado) {
       if (role === 'admin') {
           window.location.href = './index.html';
+          // Guardar datos del administrador en localStorage
+          localStorage.setItem('admin', JSON.stringify(usuarioEncontrado));
       } else {
           window.location.href = 'cliente.html';
+          // Guardar datos del cliente en localStorage
+          localStorage.setItem('cliente', JSON.stringify(usuarioEncontrado));
       }
       // Establecer el indicador de inicio de sesión
       sessionStorage.setItem('sesionIniciada', 'true');
@@ -50,3 +54,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       alert("Correo o contraseña incorrectos");
   }
 });
+
+// Imprimir los datos del administrador y el cliente en la consola
+console.log('Datos del administrador:', JSON.parse(localStorage.getItem('admin')));
+console.log('Datos del cliente:', JSON.parse(localStorage.getItem('cliente')));
