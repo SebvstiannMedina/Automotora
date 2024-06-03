@@ -25,3 +25,23 @@ window.addEventListener("scroll", function(){
         header.classList.remove("scroll")
     }
 })
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(producto) {
+    let carrito = obtenerAlmacenamientoLocal('carrito') || [];
+    carrito.push(producto);
+    guardarAlmacenamientoLocal('carrito', carrito);
+    // Redireccionar a la página de carrito
+    window.location.href = 'carrito.html';
+}
+
+// Evento de clic para el botón "Comprar" de cada producto
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('comprar-btn')) {
+        // Obtener los datos del producto
+        const productoIndex = event.target.dataset.index;
+        const producto = productos[productoIndex];
+        // Agregar el producto seleccionado al carrito
+        agregarAlCarrito(producto);
+    }
+});
