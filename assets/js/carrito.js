@@ -1,39 +1,120 @@
-// Guardar productos en el localStorage
-localStorage.setItem('productos', JSON.stringify(products));
+// Funciones para almacenar y traer los datos que se almacenan
+function guardarAlmacenamientoLocal(llave, valor_a_guardar) {
+    localStorage.setItem(llave, JSON.stringify(valor_a_guardar))
+}
+function obtenerAlmacenamientoLocal(llave) {
+    const datos = JSON.parse(localStorage.getItem(llave))
+    return datos
+}
+let productos = obtenerAlmacenamientoLocal('productos') || [];
 
-// Función para crear cartas desde datos en el localStorage
-function createCards() {
-    const container = document.getElementById('cards-container');
-    const productos = JSON.parse(localStorage.getItem('productos'));
+// Variables que traemos de nuestro html
+const informacionCompra = document.getElementById('informacionCompra');
+const contenedorCompra = document.getElementById('contenedorCompra');
+const productosCompra = document.getElementById('productosCompra');
+const contenedor = document.getElementById('contenedor');
+const carrito = document.getElementById('carrito');
+const numero = document.getElementById("numero");
+const header = document.querySelector("#header");
+const total = document.getElementById('total');
+const body = document.querySelector("body");
+const x = document.getElementById('x')
 
-    if (productos) {
-        productos.forEach(product => {
-            const cardElement = document.createElement('div');
-            cardElement.className = 'card';
+// Variables que vamos a usar en nuestoro proyecto
+let lista = []
+let valortotal = 0
 
-            const productImage = document.createElement('img');
-            productImage.src = product.urlImagen;
-            productImage.alt = product.nombre;
+// Scroll de nuestra pagina
+window.addEventListener("scroll", function () {
+    if (contenedor.getBoundingClientRect().top < 10) {
+        header.classList.add("scroll")
+    }
+    else {
+        header.classList.remove("scroll")
+    }
+})
 
-            const productName = document.createElement('h3');
-            productName.textContent = product.nombre;
 
-            const productValue = document.createElement('p');
-            productValue.textContent = `Precio: $${product.valor}`;
+window.addEventListener('load', () => {
+    visualizarProductos();
+    contenedorCompra.classList.add("none")
+})
 
-            const productStock = document.createElement('p');
-            productStock.textContent = `Existencia: ${product.existencia}`;
-
-            cardElement.appendChild(productImage);
-            cardElement.appendChild(productName);
-            cardElement.appendChild(productValue);
-            cardElement.appendChild(productStock);
-            container.appendChild(cardElement);
-        });
-    } else {
-        container.innerHTML = '<p>No hay productos disponibles.</p>';
+function visualizarProductos() {
+    contenedor.innerHTML = ""
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].existencia > 0) {
+            contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">$${productos[i].valor}</p><button onclick=comprar(${i})>Comprar</button></div></div>`
+        }
+        else {
+            contenedor.innerHTML += `<div><img src="${productos[i].urlImagen}"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio">$${productos[i].valor}</p><p class="soldOut">Sold Out</p></div></div>`
+        }
     }
 }
 
-// Llamar a la función para crear cartas al cargar la página
-window.onload = createCards;
+function comprar(indice) {
+    lista.push({ nombre: productos[indice].nombre, precio: productos[indice].valor })
+
+    let van = true
+    let i = 0
+    while (van == true) {
+        if (productos[i].nombre == productos[indice].nombre) {
+            productos[i].existencia -= 1
+            if (productos[i].existencia == 0) {
+                visualizarProductos()
+            }
+            van = false
+        }
+        guardarAlmacenamientoLocal("productos", productos)
+        i += 1
+    }
+    numero.innerHTML = lista.length
+    numero.classList.add("diseñoNumero")
+    return lista
+}
+
+carrito.addEventListener("click", function(){
+    body.style.overflow = "hidden"
+    contenedorCompra.classList.remove('none')
+    contenedorCompra.classList.add('contenedorCompra')
+    informacionCompra.classList.add('informacionCompra')
+    mostrarElemtrosLista()
+})
+
+function mostrarElemtrosLista() {
+    productosCompra.innerHTML = ""
+    valortotal = 0
+    for (let i = 0; i < lista.length; i++){
+        productosCompra.innerHTML += `<div><div class="img"><button onclick=eliminar(${i}) class="botonTrash"><img src="/img/trash.png"></button><p>${lista[i].nombre}</p></div><p> $${lista[i].precio}</p></div>`
+        valortotal += parseInt(lista[i].precio)
+    }
+    total.innerHTML = `<p>Valor Total</p> <p><span>$${valortotal}</span></p>`
+}
+
+function eliminar(indice){
+    let van = true
+    let i = 0
+    while (van == true) {
+        if (productos[i].nombre == lista[indice].nombre) {
+            productos[i].existencia += 1
+            lista.splice(indice, 1)
+            van = false
+        }
+        i += 1
+    }
+    guardarAlmacenamientoLocal("productos", productos)
+
+    numero.innerHTML = lista.length
+    if (lista.length == 0){
+        numero.classList.remove("diseñoNumero")
+    }
+    visualizarProductos()
+    mostrarElemtrosLista()
+}
+
+x.addEventListener("click", function(){
+    body.style.overflow = "auto"
+    contenedorCompra.classList.add('none')
+    contenedorCompra.classList.remove('contenedorCompra')
+    informacionCompra.classList.remove('informacionCompra')
+})
