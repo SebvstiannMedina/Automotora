@@ -20,7 +20,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       { email: "admin2@example.com", password: "admin2pass" }
   ];
   var clientes = [
-      { email: "cliente1@example.com", password: "cliente1pass" },
+      { email: "ani@gmail.com", password: "ani1234" },
       { email: "cliente2@example.com", password: "cliente2pass" }
   ];
 
